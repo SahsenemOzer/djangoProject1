@@ -2,6 +2,7 @@ from django.shortcuts import render
 #from unicodedata import category
 
 
+
 # Create your views here.
 
 def index(request):
