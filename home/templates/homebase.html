@@ -26,18 +26,20 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}" />
 
     <title>
-      {% block title %} {% endblock %} İlk Django Prpjem
+      {% block title %} İlk Django Projem {% endblock %}
     </title>
-
+    {% block head  %}{% endblock %}
   </head>
 
   <body>
    <div>
-       {% include 'header.html' %}
+       
+       {% block header  %}{% endblock %}
        {% block sidebar %} {% endblock %}
        {% block content %} {% endblock %}
+       {% block slider %} {% endblock %}
 
    </div>
-       {% block footer %} {% include 'footer.html' %} {% endblock %}
+       {% block footer %} {% endblock %}
   </body>
 </html>
