@@ -16,12 +16,15 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-
+from home import views
 from djangoProject1 import settings
 
 urlpatterns = [
     path('', include('home.urls')),
     path('home/', include('home.urls')),
+    path('contact/', views.contact,name='contact'),
+    path('services/', views.services,name='services'),
+    path('about/', views.about,name='about'),
     path('product/', include('product.urls')),
     path('admin/', admin.site.urls),
 
