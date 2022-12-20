@@ -28,19 +28,19 @@
     <title>
       {% block title %} İlk Django Projem {% endblock %}
     </title>
-    {% block head  %}{% endblock %}
+    {% block head %}{% endblock %}
   </head>
 
   <body>
    <div>
 
-       {% block header  %}{% endblock %}
-       {% block sidebar %} {% endblock %}
+       {% block header  %}{% include 'header.html' %}{% endblock %}
+       {% block sidebar %}{% include 'sidebar.html' %} {% endblock %}
        {% block content %} {% endblock %}
-       {% block slider %} {% endblock %}
+       {% block slider %}{% include 'slider.html' %} {% endblock %}
 
 
    </div>
-       {% block footer %} {% endblock %}
+       {% block footer %}{% include 'footer.html' %} {% endblock %}
   </body>
 </html>

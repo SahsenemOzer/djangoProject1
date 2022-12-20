@@ -22,3 +22,4 @@ def services(request):
 def properties(request):
     return render(request, 'properties.html')
 
+
