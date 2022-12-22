@@ -1,15 +1,18 @@
 from django.shortcuts import render
-#from unicodedata import category
+from django.http.response import HttpResponse
+from .models import house
+from product.models import Category
 
 
 
 # Create your views here.
 
 def index(request):
-    text = "Merhaba Dunya"
-    context = {'text': text}
+    data = {
+        "house" : house.objects.all()
+    }
 
-    return render(request, 'index.html', context)
+    return render(request, 'index.html',data)
 def contact(request):
     return render(request, 'contact.html')
 
@@ -20,6 +23,13 @@ def services(request):
     return render(request, 'services.html')
 
 def properties(request):
-    return render(request, 'properties.html')
+    data = {
+        "house" : house.objects.all()
+    }
+    return render(request, 'properties.html', data)
+
+def propertySingle(request):
+    return render(request, 'property-single.html')
+
 
 
