@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +26,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}" />
 
     <title>
-      {% block title %} İlk Django Projem {% endblock %}
+      {% block title %} Emlak {% endblock %}
     </title>
     {% block head %}{% endblock %}
   </head>
@@ -36,9 +35,8 @@
    <div>
 
        {% block header  %}{% include 'header.html' %}{% endblock %}
-       {% block sidebar %}{% include 'sidebar.html' %} {% endblock %}
        {% block content %} {% endblock %}
-       {% block slider %}{% include 'slider.html' %} {% endblock %}
+
 
 
    </div>
